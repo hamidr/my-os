@@ -1,4 +1,4 @@
-{ lib, home-manager, lazyvim, ... }:
+{ lib, home-manager, ... }:
 let
   vals = (import ../cfg.nix {});
 in
