@@ -11,7 +11,7 @@ in
       update = ''cd /backup/nixos && \
         nix flake update && \
         git add . && \
-        git commit -m "$(date)" \
+        git commit -m "$(date)" && \
         sudo nixos-rebuild switch --flake .
       '';
       svim = "sudo vim";
