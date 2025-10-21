@@ -8,7 +8,8 @@ in
     shellAliases = {
       ll = "ls -l";
       ta = "tmux attach || tmux";
-      update = "sudo nixos-rebuild switch";
+      update = "sudo nix-channel --update; sudo nixos-rebuild switch";
+      svim = "sudo vim";
     };
     oh-my-zsh = {
       enable = true;

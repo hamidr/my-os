@@ -12,6 +12,6 @@ in
     signal-desktop
     discord
     brave
-    protonvpn-cli
+    protonvpn-gui
   ];
 }

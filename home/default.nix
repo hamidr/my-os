@@ -1,11 +1,10 @@
-{ lib, ... }:
+{ lib, home-manager, ... }:
 let
   vals = (import ../cfg.nix {});
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-${vals.system.os-version}.tar.gz";
 in
 {
   imports = [
-    (import "${home-manager}/nixos")
+    home-manager.nixosModules.default
     ./zsh.nix
     ./sway.nix
     ./direnv.nix
@@ -13,6 +12,7 @@ in
     ./waybar.nix
     ./swaylock.nix
     ./alacritty.nix
+    ./rofi.nix
     ./nonfree.nix
   ];
 
@@ -29,8 +29,8 @@ in
        "export NIXOS_OZONE_WL=1" # Electron
      ];
 
-
      home.packages = with pkgs; [
+       killall
        git
        dconf
        fzf
@@ -39,16 +39,19 @@ in
        tig
        vlc
        vlc-bittorrent
+       thunderbird
+       evince
+       duckdb
+       yt-dlp
+       bat
 
        grim # screenshot functionality
        slurp # screenshot functionality
        mako # notification system developed by swaywm maintainer
        wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
-       rofi
+       swayidle
        mpd
        playerctl
-       cliphist
-       rofi-bluetooth
 
        xfce.thunar
        xfce.thunar-archive-plugin
@@ -59,17 +62,6 @@ in
        # Persian Font
        vazir-fonts
      ];
-
-
-     fonts.fontconfig = {
-       enable = true;
-       defaultFonts = {
-         serif = [  "Liberation Serif" "Vazirmatn" ];
-         sansSerif = [ "Ubuntu" "Vazirmatn" ];
-         monospace = [ "Ubuntu Mono" ];
-       };
-     };
-
   };
 
 }

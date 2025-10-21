@@ -7,7 +7,7 @@ in
     isNormalUser = true;
     description = "${user.fullname}";
     home = "${user.homedir}";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" ];
     shell = pkgs.zsh;
   };
 }

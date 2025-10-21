@@ -22,10 +22,38 @@ let
     names = ["${theme.font}"];
     size = toString theme.font-size;
   }; 
-  
+
+  timelock = writeShellApplication {
+    name = "timelock";
+
+    runtimeInputs = [swayidle swaylock];
+
+    text = ''
+    swayidle -w timeout 900 'swaylock -f' before-sleep 'swaylock -f' 
+    '';
+  };
+
+
+  lockman = writeShellApplication {
+    name = "lockman";
+
+    runtimeInputs = [sway swayidle swaylock];
+
+    text = ''
+      swayidle \
+        timeout 5 'swaymsg "output * dpms off"' \
+        resume 'swaymsg "output * dpms on"' & 
+      swaylock
+      # Kills last background task so idle timer doesn't keep running
+      kill %%
+    '';
+  };
+
   startup = [
+    {command = "swaymsg workspace 1";}
     {command = "firefox";}
     {command = "alacritty";}
+    {command = "${lib.getExe timelock}"; }
   ];
 
   bars = [
@@ -55,6 +83,7 @@ let
     "${mod}+e" = "exec ${rofi-pass-wayland}/bin/rofi-pass";
 
     "${mod}+q" = "kill";
+    "Ctrl+Alt+l" = "exec ${lib.getExe lockman}";
 
     # Terminal
     "${mod}+Return" = "exec ${alacritty}/bin/alacritty";
@@ -125,6 +154,41 @@ let
     "XF86MonBrightnessDown" = "exec ${light}/bin/light -U 2";
   }; 
 
+  appAssigns = {
+    "1" = [
+      { app_id = "Alacritty"; }
+      { app_id = "firefox"; }
+    ];
+    "2" = [ 
+    ];
+    "3" = [ # Entertainment
+    ];
+    "4" = [ # Editor
+      { app_id = "vscode"; }
+      { app_id = ".*zed.*"; }
+      { instance = "vscodium"; }
+      { class = "jetbrains-clion"; }
+    ];
+    "5" = [
+    ];
+
+    "6" = [
+    ];
+    "7" = [
+    ];
+    "8" = [ 
+    ];
+   "9" = [
+      { app_id = ".*telegram.*"; }
+      { class = "Signal"; }
+      { class = "discord"; }
+   ];
+    "10" = [ # Multimedia
+      { app_id = "thunderbird"; }
+      { class = "vlc"; }
+      { instance = "audacity"; }
+    ];
+  };
 in
 {
   home-manager.users.${user}.wayland.windowManager.sway = {
@@ -134,6 +198,7 @@ in
       focus.followMouse = false;
       modifier = "${mod}";
       terminal = "alacritty"; 
+      assigns = appAssigns;
       inherit input;
       inherit fonts;
       inherit startup;
