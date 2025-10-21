@@ -1,4 +1,4 @@
-{ lib, home-manager, ... }:
+{ lib, home-manager, lazyvim, ... }:
 let
   vals = (import ../cfg.nix {});
 in
@@ -14,8 +14,8 @@ in
     ./firefox.nix
     ./git.nix
     ./rofi.nix
-    ./nonfree.nix
     ./vscode.nix
+    ./nonfree.nix
   ];
 
   home-manager.backupFileExtension = "backup";
