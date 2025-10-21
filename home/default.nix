@@ -14,7 +14,7 @@ in
     ./firefox.nix
     ./git.nix
     ./rofi.nix
-    ./lazyvim
+    ./lazyvim.nix
     ./nonfree.nix
   ];
 
