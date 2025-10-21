@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lazyvim, ... }:
 let 
   user = (import ../cfg.nix {}).user.username;
 in
