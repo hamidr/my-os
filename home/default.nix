@@ -8,10 +8,11 @@ in
     ./zsh.nix
     ./sway.nix
     ./direnv.nix
-    ./firefox.nix
     ./waybar.nix
     ./swaylock.nix
     ./alacritty.nix
+    ./firefox.nix
+    ./git.nix
     ./rofi.nix
     ./nonfree.nix
   ];
@@ -31,7 +32,6 @@ in
 
      home.packages = with pkgs; [
        killall
-       git
        dconf
        fzf
        jq
