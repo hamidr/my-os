@@ -5,12 +5,17 @@ in
 {
   home-manager.users.${user}.programs.git = {
     enable = true;
-    userName  = "hamidr";
-    userEmail = "hamidr.dev@gmail.com";
-    aliases = {
-      ci = "commit";
-      co = "checkout";
-      s = "status";
+    settings = {
+      user.name  = "hamidr";
+      user.email = "hamidr.dev@gmail.com";
+      aliases = {
+        ci = "commit";
+        co = "checkout";
+        s = "status";
+      };
+
+
+      push = { autoSetupRemote = true; };
     };
   };
 }
