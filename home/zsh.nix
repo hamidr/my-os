@@ -8,7 +8,7 @@ in
     shellAliases = {
       ll = "ls -l";
       ta = "tmux attach || tmux";
-      update = "ga .; gci -m '$(date)'; sudo nixos-rebuild switch --flake .";
+      update = "git add /backup/nixos && git commit -m \"$(date)\" && sudo nixos-rebuild switch --flake /backup/nixos";
       svim = "sudo vim";
     };
     oh-my-zsh = {
