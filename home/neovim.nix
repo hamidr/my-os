@@ -23,4 +23,11 @@ in
       };
     };
   };
+
+  imports = [ lazyvim.homeManagerModules.default ];
+
+  home-manager.users.${user}.programs.lazyvim = {
+    enable = true;
+  };
+
 }
