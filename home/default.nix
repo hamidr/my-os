@@ -15,6 +15,7 @@ in
     ./git.nix
     ./rofi.nix
     ./nonfree.nix
+    ./vscode.nix
   ];
 
   home-manager.backupFileExtension = "backup";

@@ -9,8 +9,8 @@ in
       ll = "ls -l";
       ta = "tmux attach || tmux";
       update = ''cd /backup/nixos && \
-        nix flake update && \
         git add . && \
+        nix flake update && \
         git commit -m "$(date)" && \
         sudo nixos-rebuild switch --flake .
       '';
