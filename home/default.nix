@@ -14,7 +14,6 @@ in
     ./firefox.nix
     ./git.nix
     ./rofi.nix
-    ./neovim.nix
     ./nonfree.nix
   ];
 
