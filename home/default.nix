@@ -5,6 +5,7 @@ in
 {
   imports = [
     home-manager.nixosModules.default
+    lazyvim.homeManagerModules.default
     ./zsh.nix
     ./sway.nix
     ./direnv.nix
