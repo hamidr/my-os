@@ -12,8 +12,5 @@ in
       co = "checkout";
       s = "status";
     };
-    config = {
-      push = { autoSetupRemote = true; };
-    };
   };
 }
