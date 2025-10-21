@@ -21,7 +21,7 @@ in
   home-manager.useUserPackages = true;
 
   home-manager.users.${vals.user.username} = {pkgs, ...} @ inputs: {
-     home.stateVersion = "${vals.system.os-version}";
+     home.stateVersion = "${vals.system.hm-version}";
      home.homeDirectory = lib.mkForce "${vals.user.homedir}";
 
      home.file.".hm-graphical-session".text = pkgs.lib.concatStringsSep "\n" [

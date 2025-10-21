@@ -3,6 +3,7 @@ let
   system = {
     hostname = "nixos";
     os-version = "25.05";
+    hm-version = "25.11";
   };
 
   user = {
