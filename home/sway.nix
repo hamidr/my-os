@@ -191,19 +191,28 @@ let
   };
 in
 {
-  home-manager.users.${user}.wayland.windowManager.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true; # Fixes common issues with GTK 3 apps
-    config = {
-      focus.followMouse = false;
-      modifier = "${mod}";
-      terminal = "alacritty"; 
-      assigns = appAssigns;
-      inherit input;
-      inherit fonts;
-      inherit startup;
-      inherit bars;
-      inherit keybindings;
+  home-manager.users.${user} = {
+    home.packages = [
+      grim # screenshot functionality
+      slurp # screenshot functionality
+      mako # notification system developed by swaywm maintainer
+      wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
+    ];
+
+    wayland.windowManager.sway = {
+      enable = true;
+      wrapperFeatures.gtk = true; # Fixes common issues with GTK 3 apps
+      config = {
+        focus.followMouse = false;
+        modifier = "${mod}";
+        terminal = "alacritty"; 
+        assigns = appAssigns;
+        inherit input;
+        inherit fonts;
+        inherit startup;
+        inherit bars;
+        inherit keybindings;
+      };
     };
   };
 }

@@ -6,11 +6,6 @@ in
   nixpkgs.config.allowUnfree = true;
 
   home-manager.users.${user}.home.packages = with pkgs; [
-    jetbrains.clion
-    telegram-desktop
-    signal-desktop
-    discord
-    brave
-    protonvpn-gui
+    duckdb
   ];
 }

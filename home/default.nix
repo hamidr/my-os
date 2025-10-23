@@ -5,6 +5,7 @@ in
 {
   imports = [
     home-manager.nixosModules.default
+    ./terminal.nix
     ./zsh.nix
     ./sway.nix
     ./direnv.nix
@@ -16,6 +17,7 @@ in
     ./rofi.nix
     ./vscode.nix
     ./nonfree.nix
+    ./desktop.nix
   ];
 
   home-manager.backupFileExtension = "backup";
@@ -32,36 +34,8 @@ in
      ];
 
      home.packages = with pkgs; [
-       killall
-       dconf
-       fzf
-       jq
-       wget
-       tig
-       vlc
-       vlc-bittorrent
-       thunderbird
-       evince
-       duckdb
-       yt-dlp
-       bat
-
-       grim # screenshot functionality
-       slurp # screenshot functionality
-       mako # notification system developed by swaywm maintainer
-       wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
-       swayidle
        mpd
        playerctl
-
-       xfce.thunar
-       xfce.thunar-archive-plugin
-       xfce.thunar-volman
-       
-       ubuntu_font_family
-       liberation_ttf
-       # Persian Font
-       vazir-fonts
      ];
   };
 
