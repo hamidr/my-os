@@ -162,7 +162,7 @@ in {
     enable = true;
     settings = {
       inherit mainBar;
-      inhert style;
     };
+    inhert style;
   };
 }
