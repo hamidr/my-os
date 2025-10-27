@@ -155,8 +155,8 @@ let
   };
   styleCfg = ''
       * {
-      font-family: ${theme.font};
-      font-size: ${toString theme.font-size}px;
+      font-family: ${theme.panel-font};
+      font-size: ${toString theme.panel-font-size}px;
     }
   '';
 

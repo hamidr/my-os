@@ -22,6 +22,10 @@ let
     font = "Ubuntu";
     font-size = 12;
 
+    panel-font = "Ubuntu";
+    panel-font-size = 16;
+
+
     font-mono = "Ubuntu Mono";
     font-mono-size = 17;
   };
