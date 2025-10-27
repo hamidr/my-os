@@ -153,16 +153,14 @@ let
       };
     };
   };
-  style = ''
+  styleCfg = ''
 
   '';
 
 in {
   home-manager.users.${username}.programs.waybar = {
     enable = true;
-    settings = {
-      inherit mainBar;
-    };
-    inhert style;
+    style = styleCfg;
+    settings.mainBar = mainBar;
   };
 }
