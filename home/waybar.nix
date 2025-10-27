@@ -154,7 +154,10 @@ let
     };
   };
   styleCfg = ''
-
+      * {
+      font-family: ${theme.font}, ${theme.font-symbol};
+      font-size: ${toString theme.font-size-alt}px;
+    }
   '';
 
 in {
