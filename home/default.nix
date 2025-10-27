@@ -6,16 +6,7 @@ in
   imports = [
     home-manager.nixosModules.default
     ./terminal.nix
-    ./zsh.nix
     ./sway.nix
-    ./direnv.nix
-    ./waybar.nix
-    ./swaylock.nix
-    ./alacritty.nix
-    ./firefox.nix
-    ./git.nix
-    ./rofi.nix
-    ./vscode.nix
     ./nonfree.nix
     ./desktop.nix
   ];

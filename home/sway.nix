@@ -191,6 +191,12 @@ let
   };
 in
 {
+  imports = [
+    ./waybar.nix
+    ./swaylock.nix
+    ./rofi.nix
+  ];
+
   home-manager.users.${user} = {
     home.packages = [
       grim # screenshot functionality
