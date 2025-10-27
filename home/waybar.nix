@@ -6,7 +6,7 @@ let
   mainBar = {
     layer = "bottom";
     position = "top";
-    height = 24;
+    height = 40;
     spacing = 0;
     output = [
       "DP-2"
