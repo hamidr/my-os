@@ -1,0 +1,1 @@
+- separate hardware(AMD)

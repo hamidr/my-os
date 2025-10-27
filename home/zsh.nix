@@ -14,7 +14,7 @@ in
         git commit -m "$(date)" && \
         sudo nixos-rebuild switch --flake .
       '';
-      svim = "sudo vim";
+      cdnix = "cd /backup/nixos";
     };
     oh-my-zsh = {
       enable = true;
