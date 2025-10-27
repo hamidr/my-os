@@ -7,8 +7,8 @@ in
     home-manager.nixosModules.default
     ./terminal.nix
     ./sway.nix
-    ./nonfree.nix
     ./desktop.nix
+    ./nonfree.nix
   ];
 
   home-manager.backupFileExtension = "backup";

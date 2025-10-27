@@ -8,8 +8,8 @@ in
     shellAliases = {
       ll = "ls -l";
       ta = "tmux attach || tmux";
-      update = ''cd /backup/nixos && \
-        git add . && \
+      update = ''cd /backup/nixos; \
+        git add . ; \
         nix flake update && \
         git commit -m "$(date)" && \
         sudo nixos-rebuild switch --flake .

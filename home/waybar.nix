@@ -6,7 +6,7 @@ let
   mainBar = {
     layer = "bottom";
     position = "top";
-    height = 40;
+    height = 24;
     spacing = 0;
     output = [
       "DP-2"
@@ -85,8 +85,8 @@ let
         on = " ";
       };
       state-icons = {
-        paused = "";
-        playing = "";
+        paused = "X";
+        playing = "P";
       };
       tooltip-format = "mpd (connected)";
       tooltip-format-disconnected = "mpd (disconnected)";
