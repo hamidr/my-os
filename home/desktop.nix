@@ -21,7 +21,7 @@ in
     xfce.thunar-archive-plugin
     xfce.thunar-volman
 
-    ubuntu_font_family
+    ubuntu-classic
     liberation_ttf
     # Persian Font
     vazir-fonts
