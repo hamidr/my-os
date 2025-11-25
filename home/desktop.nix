@@ -16,10 +16,7 @@ in
     thunderbird
     evince
     emacs
-
-    xfce.thunar
-    xfce.thunar-archive-plugin
-    xfce.thunar-volman
+    nautilus
 
     ubuntu-classic
     liberation_ttf
