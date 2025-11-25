@@ -26,6 +26,7 @@ in
         "systemadmin"
         "vi-mode"
         "fzf"
+        "autoenv"
       ];
     };
   };
