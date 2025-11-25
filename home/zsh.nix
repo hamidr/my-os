@@ -5,7 +5,6 @@ in
 {
   home-manager.users.${user}.programs.zsh = {
     enable = true;
-    zsh-autoenv.enable = true;
     shellAliases = {
       ll = "ls -l";
       ta = "tmux attach || tmux";
