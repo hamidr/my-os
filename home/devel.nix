@@ -4,6 +4,11 @@ let
 in
 {
   home-manager.users.${user} = {
+    home.packages = with pkgs; [
+      gcc
+      g++
+    ];
+
     programs.go = {
       enable = true;
     };
