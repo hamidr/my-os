@@ -6,7 +6,7 @@ in
   imports = [
     home-manager.nixosModules.default
     ./terminal.nix
-    ./sway.nix
+    #./sway.nix
     ./desktop.nix
     ./nonfree.nix
   ];

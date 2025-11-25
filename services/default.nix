@@ -1,7 +1,7 @@
 {...}:
 {
   imports = [
-    ./greetd.nix
+    #./greetd.nix
     ./pipewire.nix
     ./gnome-keyring.nix
     ./openssh.nix

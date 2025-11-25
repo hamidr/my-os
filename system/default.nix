@@ -10,5 +10,6 @@
     ./hardware.nix
     ./virtualisation.nix
     ./users.nix
+    ./gnome.nix
   ];
 }
