@@ -19,6 +19,5 @@ in
     jq
     wget
     tig
-    dconf 
   ];
 }
