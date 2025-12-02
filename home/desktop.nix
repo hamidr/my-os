@@ -7,6 +7,7 @@ in
     ./dconf.nix
     ./alacritty.nix
     ./firefox.nix
+    ./librewolf.nix
     ./git.nix
     ./vscode.nix
   ];
