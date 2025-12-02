@@ -16,13 +16,13 @@ in
       upgrade = ''cd /backup/nixos; \
         git add . ; \
         nix flake update && \
-        git commit -m "$(date)" && \
-        sudo nixos-rebuild switch --flake .
+        sudo nixos-rebuild switch --flake . && \
+        git commit -m "$(date)" 
       '';
       update = ''cd /backup/nixos; \
         git add . ; \
-        git commit -m "$(date)" && \
-        sudo nixos-rebuild switch --flake .
+        sudo nixos-rebuild switch --flake . && \
+        git commit -m "$(date)" 
       '';
 
       cdnix = "cd /backup/nixos";
