@@ -8,6 +8,11 @@ in
     shellAliases = {
       ll = "ls -l";
       ta = "tmux attach || tmux";
+      gc_collect = ''
+        nix store gc;
+        sudo nix-collect-garbage -d;
+      '';
+      rebuild = "sudo nixos-rebuild switch --flake .";
       upgrade = ''cd /backup/nixos; \
         git add . ; \
         nix flake update && \
