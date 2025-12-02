@@ -23,6 +23,6 @@ in
     liberation_ttf
     # Persian Font
     vazir-fonts
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
   ];
 }
