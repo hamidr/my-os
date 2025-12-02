@@ -12,7 +12,7 @@
 
   networking.firewall.enable = true;
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [22 80];
+  networking.firewall.allowedTCPPorts = [22 80 8081];
   networking.firewall.allowedUDPPorts = [];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
