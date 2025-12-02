@@ -8,7 +8,7 @@ in
     enable = true;
     ports = [ 22 ];
     settings = {
-      PasswordAuthentication = yes;
+      PasswordAuthentication = true;
       KbdInteractiveAuthentication = false;
       PermitRootLogin = "no";
       AllowUsers = [ user ];

@@ -154,9 +154,18 @@ let
     };
   };
   styleCfg = ''
-      * {
+    * {
+      border: none;
+      border-radius: 0;
       font-family: ${theme.panel-font};
       font-size: ${toString theme.panel-font-size}px;
+    }
+    window#waybar {
+      background: #16191C;
+      color: #AAB2BF;
+    }
+    #workspaces button {
+      padding: 0 5px;
     }
   '';
 

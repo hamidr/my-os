@@ -72,8 +72,8 @@ in
         "browser.search.suggest.enabled" = lock-false;
         "browser.search.suggest.enabled.private" = lock-false;
         "browser.urlbar.suggest.searches" = lock-false;
-	"browser.urlbar.placeholderName" = search-engine;
-	"browser.urlbar.placeholderName.private" = search-engine;
+        "browser.urlbar.placeholderName" = search-engine;
+        "browser.urlbar.placeholderName.private" = search-engine;
         "browser.urlbar.showSearchSuggestionsFirst" = lock-false;
         "browser.newtabpage.activity-stream.feeds.section.topstories" = lock-false;
         "browser.newtabpage.activity-stream.feeds.snippets" = lock-false;
