@@ -4,6 +4,7 @@ let
 in
 {
   imports = [
+    ./dconf.nix
     ./alacritty.nix
     ./firefox.nix
     ./git.nix
@@ -22,5 +23,6 @@ in
     liberation_ttf
     # Persian Font
     vazir-fonts
+    gnome.adwaita-icon-theme
   ];
 }
