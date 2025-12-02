@@ -7,16 +7,10 @@ in
     home.packages = with pkgs; [
       gcc
       pgcli
-      nushell
     ];
 
     programs.go = {
       enable = true;
     };
-
-    programs.nushell = {
-      enable = true;
-    };
-
   };
 }
