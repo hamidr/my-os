@@ -28,7 +28,7 @@ in
         Fingerprinting = true;
       };
       DisablePocket = true;
-      DisableFirefoxAccounts = true;
+      DisableFirefoxAccounts = false;
       DisableAccounts = true;
       DisableFirefoxScreenshots = true;
       OverrideFirstRunPage = "";
