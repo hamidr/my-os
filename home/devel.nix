@@ -8,10 +8,15 @@ in
       gcc
       pgcli
       gnumake
+      cmake
     ];
 
-    programs.go = {
-      enable = true;
+    programs = {
+      go.enable = true;
+      java = {
+        enable = true;
+        package = pkgs.oraclejre22;
+      };
     };
   };
 }

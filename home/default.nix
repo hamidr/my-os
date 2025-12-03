@@ -9,7 +9,7 @@ in
     ./sway.nix
     ./desktop.nix
     ./nonfree.nix
-    ./devel.nix
+#    ./devel.nix
   ];
 
   home-manager.backupFileExtension = "backup";
