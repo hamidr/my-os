@@ -19,6 +19,7 @@ in
     /* ---- POLICIES ---- */
     # Check about:policies#documentation for options.
     policies = {
+      BlockAboutConfig = true;
       DisableTelemetry = true;
       DisableFirefoxStudies = true;
       EnableTrackingProtection = {
@@ -29,7 +30,7 @@ in
       };
       DisablePocket = true;
       DisableFirefoxAccounts = false;
-      DisableAccounts = true;
+      DisableAccounts = false;
       DisableFirefoxScreenshots = true;
       OverrideFirstRunPage = "";
       OverridePostUpdatePage = "";
@@ -64,6 +65,7 @@ in
       /* ---- PREFERENCES ---- */
       # Check about:config for options.
       Preferences = { 
+        "browser.ml.chat.enabled" = false;
         "browser.contentblocking.category" = { Value = "strict"; Status = "locked"; };
         "extensions.pocket.enabled" = lock-false;
         "extensions.screenshots.disabled" = lock-true;
