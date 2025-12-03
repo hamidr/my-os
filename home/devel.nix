@@ -7,6 +7,7 @@ in
     home.packages = with pkgs; [
       gcc
       pgcli
+      gnumake
     ];
 
     programs.go = {
