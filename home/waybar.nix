@@ -1,8 +1,6 @@
-{ ... }:
+{ sys-cnf, ... }:
 let
-  vals = import ../cfg.nix {};
-  username = vals.user.username;
-  theme = vals.style;
+  theme = sys-cnf.style;
   mainBar = {
     layer = "bottom";
     position = "top";
@@ -145,7 +143,7 @@ let
   '';
 
 in {
-  home-manager.users.${username}.programs.waybar = {
+  home-manager.users.${sys-cnf.username}.programs.waybar = {
     enable = true;
     style = styleCfg;
     settings.mainBar = mainBar;

@@ -1,6 +1,5 @@
-{...}:
+{ sys-cnf, ... }:
 let 
-  user = (import ../cfg.nix {}).user.username;
   lock-false = {
     Value = false;
     Status = "locked";
@@ -12,7 +11,7 @@ let
   search-engine = "DuckDuckGo";
 in
 {
-  home-manager.users.${user}.programs.firefox = {
+  home-manager.users.${sys-cnf.username}.programs.firefox = {
     enable = true;
     languagePacks = [ "fa" "en-US" ];
 

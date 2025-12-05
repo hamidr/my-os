@@ -1,9 +1,6 @@
-{ ... }:
-let 
-  user = (import ../cfg.nix {}).user.username;
-in
+{ sys-cnf, ... }:
 {
-  home-manager.users.${user}.programs.direnv = {
+  home-manager.users.${sys-cnf.username}.programs.direnv = {
     enable = true;
     enableBashIntegration = true; # see note on other shells below
     enableZshIntegration = true;

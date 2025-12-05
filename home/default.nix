@@ -1,7 +1,4 @@
-{ lib, home-manager, ... }:
-let
-  vals = (import ../cfg.nix {});
-in
+{ lib, home-manager, sys-cnf, ... }:
 {
   imports = [
     home-manager.nixosModules.default
@@ -16,9 +13,9 @@ in
   
   home-manager.useUserPackages = true;
 
-  home-manager.users.${vals.user.username} = {pkgs, ...} @ inputs: {
-     home.stateVersion = "${vals.system.hm-version}";
-     home.homeDirectory = lib.mkForce "${vals.user.homedir}";
+  home-manager.users.${sys-cnf.username} = {pkgs, ...} @ inputs: {
+     home.stateVersion = "${sys-cnf.system.hm-version}";
+     home.homeDirectory = lib.mkForce "${sys-cnf.user.homedir}";
 
      home.file.".hm-graphical-session".text = pkgs.lib.concatStringsSep "\n" [
        "export MOZ_ENABLE_WAYLAND=1"

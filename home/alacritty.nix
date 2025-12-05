@@ -1,18 +1,13 @@
-{ ... }:
-let 
-  cfg = (import ../cfg.nix {});
-  user = cfg.user.username;
-  theme = cfg.style;
-in
+{ sys-cnf, ... }:
 {
-  home-manager.users.${user}.programs.alacritty = {
+  home-manager.users.${sys-cnf.username}.programs.alacritty = {
     enable = true;
     settings = {
 #      terminal.shell = "tmux attach || tmux";
       font = {
-        size = theme.font-mono-size;
+        size = sys-cnf.style.font-mono-size;
         normal = {
-          family = "${theme.font-mono}";
+          family = "${sys-cnf.style.font-mono}";
           style = "Regular";
         };
       };

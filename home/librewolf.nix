@@ -1,9 +1,6 @@
-{ ... }:
-let 
-  user = (import ../cfg.nix {}).user.username;
-in
+{ sys-cnf, ... }:
 {
-  home-manager.users.${user}.programs.librewolf = {
+  home-manager.users.${sys-cnf.username}.programs.librewolf = {
     enable = true;
     settings = {
       "webgl.disabled" = false;

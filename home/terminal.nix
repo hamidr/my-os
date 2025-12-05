@@ -1,7 +1,4 @@
-{ pkgs, ... }:
-let 
-  user = (import ../cfg.nix {}).user.username;
-in
+{ pkgs, sys-cnf, ... }:
 {
   imports = [
     ./zsh.nix
@@ -10,7 +7,7 @@ in
     ./nonfree.nix
   ];
 
-  home-manager.users.${user}.home.packages = with pkgs; [
+  home-manager.users.${sys-cnf.username}.home.packages = with pkgs; [
     killall
     eza
     yt-dlp

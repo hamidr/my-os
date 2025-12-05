@@ -1,11 +1,8 @@
-{ pkgs, ... }:
-let 
-  user = (import ../cfg.nix {}).user.username;
-in
+{ pkgs, sys-cnf, ... }:
 {
   nixpkgs.config.allowUnfree = true;
 
-  home-manager.users.${user}.home.packages = with pkgs; [
+  home-manager.users.${sys-cnf.username}.home.packages = with pkgs; [
     jetbrains.clion
     telegram-desktop
     signal-desktop

@@ -1,7 +1,4 @@
-{ pkgs, ... }:
-let 
-  user = (import ../cfg.nix {}).user.username;
-in
+{ pkgs, sys-cnf, ... }:
 {
   imports = [
     ./dconf.nix
@@ -11,7 +8,7 @@ in
     ./vscode.nix
   ];
 
-  home-manager.users.${user}.home.packages = with pkgs; [
+  home-manager.users.${sys-cnf.username}.home.packages = with pkgs; [
     vlc 
     vlc-bittorrent
     thunderbird

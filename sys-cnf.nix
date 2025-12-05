@@ -1,5 +1,7 @@
 {...}:
 let
+  username = "hamid";
+
   system = {
     hostname = "nixos";
     os-version = "25.05";
@@ -7,9 +9,8 @@ let
   };
 
   user = {
-    username = "hamid";
     fullname = "Hamid";
-    homedir = "/home/${user.username}";
+    homedir = "/home/${username}";
   };
 
   style = {
@@ -31,6 +32,7 @@ let
   };
 
 in {
+  inherit username;
   inherit system;
   inherit user;
   inherit style;

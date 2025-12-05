@@ -1,9 +1,6 @@
-{ pkgs, ... }:
-let 
-  user = (import ../cfg.nix {}).user.username;
-in
+{ pkgs, sys-cnf, ... }:
 {
-  home-manager.users.${user} = {
+  home-manager.users.${sys-cnf.username} = {
     home.packages = with pkgs; [
       cliphist
       rofi-bluetooth

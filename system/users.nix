@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, sys-cnf, ... }:
 let
-  user = (import ../cfg.nix {}).user;
+  user = sys-cnf.user;
 in
 {
-  users.users.${user.username} = {
+  users.users.${sys-cnf.username} = {
     isNormalUser = true;
     description = "${user.fullname}";
     home = "${user.homedir}";

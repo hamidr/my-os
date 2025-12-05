@@ -1,11 +1,8 @@
-{ pkgs, ... }:
-let 
-  user = (import ../cfg.nix {}).user.username;
-in
+{ pkgs, sys-cnf, ... }:
 {
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  home-manager.users.${user}.programs.vscode = {
+  home-manager.users.${sys-cnf.username}.programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
     profiles.default.extensions = with pkgs.vscode-extensions; [

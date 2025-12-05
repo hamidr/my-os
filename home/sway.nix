@@ -1,14 +1,14 @@
 { 
   lib,
   pkgs,
+  sys-cnf,
   ...
 }:
 with lib;
 with pkgs;
 let 
-  cfg = import ../cfg.nix {};
-  user = (import ../cfg.nix {}).user.username;
-  theme = cfg.style;
+  user = sys-cnf.username;
+  theme = sys-cnf.style;
 
   mod = "Mod4";
   

@@ -1,10 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, sys-cnf, ... }:
 with pkgs;
-let 
-  user = (import ../cfg.nix {}).user.username;
-in
 {
-  home-manager.users.${user} = {
+
+  home-manager.users.${sys-cnf.username} = {
     home.packages = [
       swayidle
     ];

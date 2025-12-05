@@ -1,9 +1,6 @@
-{ ... }:
-let 
-  user = (import ../cfg.nix {}).user.username;
-in
+{ sys-cnf, ... }:
 {
-  home-manager.users.${user}.programs.zsh = {
+  home-manager.users.${sys-cnf.username}.programs.zsh = {
     enable = true;
     shellAliases = {
       ll = "ls -l";

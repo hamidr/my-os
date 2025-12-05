@@ -1,9 +1,6 @@
-{ ... }:
-let 
-  user = (import ../cfg.nix {}).user.username;
-in
+{ sys-cnf, ... }:
 {
-  home-manager.users.${user}.programs.git = {
+  home-manager.users.${sys-cnf.username}.programs.git = {
     enable = true;
     settings = {
       user.name  = "hamidr";
