@@ -18,7 +18,7 @@
         set shiftwidth=2
       '';
       packages.myVimPackage = with pkgs.vimPlugins; {
-        start = [ ctrlp ];
+        start = [ ctrlp lazy-nvim ];
       };
     };
   };
