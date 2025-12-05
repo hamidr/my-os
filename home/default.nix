@@ -2,9 +2,9 @@
 {
   imports = [
     home-manager.nixosModules.default
-    ./terminal.nix
-    ./sway.nix
-    ./desktop.nix
+    ./terminal
+    ./swaywm
+    ./desktop
     ./nonfree.nix
     ./devel.nix
   ];
