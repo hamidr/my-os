@@ -9,6 +9,7 @@ in
       pgcli
       gnumake
       cmake
+      qtcreator
     ];
 
     programs = {
