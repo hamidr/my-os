@@ -1,7 +1,6 @@
 { pkgs, ...}:
 {
   imports = [
-    ./neovim.nix
     ./htop.nix
   ];
 

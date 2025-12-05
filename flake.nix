@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nvf.url = "github:notashelf/nvf";
   };
 
@@ -17,10 +16,9 @@
     nixosConfigurations.${sys-cnf.system.hostname} = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = updated-inputs;
-      modules = [ ./init.nix ];
+      modules = [ 
+        ./init.nix
+      ];
     };
-
-
-   # nvf.homeManagerModules.default
   };
 }

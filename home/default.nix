@@ -2,18 +2,21 @@
 {
   imports = [
     home-manager.nixosModules.default
-    ./terminal
-    ./swaywm
-    ./desktop
-    ./nonfree.nix
-    ./devel.nix
+      ./terminal
+      ./swaywm
+      ./desktop
+      ./nonfree.nix
+      ./devel.nix
+
   ];
 
   home-manager.backupFileExtension = "backup";
-  
   home-manager.useUserPackages = true;
 
   home-manager.users.${sys-cnf.username} = {pkgs, ...} @ inputs: {
+    imports = [
+    ];
+
      home.stateVersion = "${sys-cnf.system.hm-version}";
      home.homeDirectory = lib.mkForce "${sys-cnf.user.homedir}";
 
