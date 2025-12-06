@@ -10,6 +10,7 @@
   environment.systemPackages = with pkgs; [
     tmux
     pciutils
+    vim
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

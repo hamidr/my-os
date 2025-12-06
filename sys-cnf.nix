@@ -32,8 +32,5 @@ let
   };
 
 in {
-  inherit username;
-  inherit system;
-  inherit user;
-  inherit style;
+  inherit username system user style;
 }

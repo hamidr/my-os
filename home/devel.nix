@@ -1,9 +1,7 @@
-{ pkgs, sys-cnf, ... }:
+{ pkgs, ... }:
 {
-  home-manager.users.${sys-cnf.username} = {
-    home.packages = with pkgs; [
-      pgcli
-      qtcreator
-    ];
-  };
+  home.packages = with pkgs; [
+    pgcli
+    qtcreator
+  ];
 }

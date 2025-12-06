@@ -1,6 +1,6 @@
-{ sys-cnf, ... }:
+{ ... }:
 {
-  home-manager.users.${sys-cnf.username}.programs.git = {
+  programs.git = {
     enable = true;
     settings = {
       user.name  = "hamidr";
@@ -10,7 +10,6 @@
         co = "checkout";
         s = "status";
       };
-
 
       push = { autoSetupRemote = true; };
     };

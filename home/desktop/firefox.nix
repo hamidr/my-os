@@ -1,4 +1,4 @@
-{ sys-cnf, ... }:
+{ ... }:
 let 
   lock-false = {
     Value = false;
@@ -11,7 +11,7 @@ let
   search-engine = "DuckDuckGo";
 in
 {
-  home-manager.users.${sys-cnf.username}.programs.firefox = {
+  programs.firefox = {
     enable = true;
     languagePacks = [ "fa" "en-US" ];
 

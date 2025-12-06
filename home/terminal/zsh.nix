@@ -1,6 +1,6 @@
-{ sys-cnf, ... }:
+{ ... }:
 {
-  home-manager.users.${sys-cnf.username}.programs.zsh = {
+  programs.zsh = {
     enable = true;
     shellAliases = {
       ll = "ls -l";

@@ -143,7 +143,7 @@ let
   '';
 
 in {
-  home-manager.users.${sys-cnf.username}.programs.waybar = {
+  programs.waybar = {
     enable = true;
     style = styleCfg;
     settings.mainBar = mainBar;

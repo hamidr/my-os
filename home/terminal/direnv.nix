@@ -1,6 +1,6 @@
-{ sys-cnf, ... }:
+{ ... }:
 {
-  home-manager.users.${sys-cnf.username}.programs.direnv = {
+  programs.direnv = {
     enable = true;
     enableBashIntegration = true; # see note on other shells below
     enableZshIntegration = true;

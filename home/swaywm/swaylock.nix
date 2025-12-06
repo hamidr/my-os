@@ -1,15 +1,11 @@
-{ pkgs, sys-cnf, ... }:
-with pkgs;
+{ pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    swayidle
+  ];
 
-  home-manager.users.${sys-cnf.username} = {
-    home.packages = [
-      swayidle
-    ];
-
-    programs.swaylock = {
-      enable = true;
-      settings = { color = "808080"; };
-    };
+  programs.swaylock = {
+    enable = true;
+    settings = { color = "808080"; };
   };
 }

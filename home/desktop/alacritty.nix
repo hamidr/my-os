@@ -1,6 +1,6 @@
 { sys-cnf, ... }:
 {
-  home-manager.users.${sys-cnf.username}.programs.alacritty = {
+  programs.alacritty = {
     enable = true;
     settings = {
 #      terminal.shell = "tmux attach || tmux";

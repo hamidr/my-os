@@ -1,13 +1,11 @@
-{ pkgs, sys-cnf, ... }:
+{ pkgs, ... }:
 {
-  home-manager.users.${sys-cnf.username} = {
-    home.packages = with pkgs; [
-      cliphist
-      rofi-bluetooth
-    ];
+  home.packages = with pkgs; [
+    cliphist
+    rofi-bluetooth
+  ];
 
-    programs.rofi = {
-      enable = true;
-    };
+  programs.rofi = {
+    enable = true;
   };
 }

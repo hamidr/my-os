@@ -1,4 +1,4 @@
-{ pkgs, sys-cnf, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./zsh.nix
@@ -7,7 +7,7 @@
 #    ./neovim.nix
   ];
 
-  home-manager.users.${sys-cnf.username}.home.packages = with pkgs; [
+  home.packages = with pkgs; [
     killall
     eza
     yt-dlp
